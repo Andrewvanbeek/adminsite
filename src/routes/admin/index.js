@@ -15,9 +15,7 @@ const title = 'Admin Page';
 const isAdmin = false;
 
 function action() {
-  if (!isAdmin) {
-    return { redirect: '/login' };
-  }
+
 
   return {
     chunks: ['admin'],
