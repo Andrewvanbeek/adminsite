@@ -15,8 +15,6 @@ const title = 'Admin Page';
 const isAdmin = false;
 
 function action() {
-
-
   return {
     chunks: ['admin'],
     title,

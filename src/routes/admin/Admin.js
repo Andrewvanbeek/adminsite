@@ -24,7 +24,7 @@ class Admin extends React.Component {
           <h1>
             {this.props.title}
           </h1>
-           <form method="post">
+          <form method="post">
             <div className={s.formGroup}>
               <label className={s.label} htmlFor="usernameOrEmail">
                 Username or email address:
@@ -55,10 +55,7 @@ class Admin extends React.Component {
             </div>
           </form>
         </div>
-
-
       </div>
-
     );
   }
 }

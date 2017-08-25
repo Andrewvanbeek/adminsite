@@ -28,9 +28,6 @@ class Login extends React.Component {
             Log in with your username or company email address.
           </p>
 
-
-
-
           <form method="post">
             <div className={s.formGroup}>
               <label className={s.label} htmlFor="usernameOrEmail">

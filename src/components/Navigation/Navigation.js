@@ -11,35 +11,42 @@ import React from 'react';
 import cx from 'classnames';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Navigation.css';
+import styles from './sideBarMenu.css';
+
 import Link from '../Link';
+
+import SideNav, { Nav, NavIcon, NavText } from 'react-sidenav';
+
+
+
 
 class Navigation extends React.Component {
   render() {
     return (
-      <div className={s.root} role="navigation">
-        <Link className={s.link} to="/about">
-          About
-        </Link>
-        <Link className={s.link} to="/contact">
-          Contact
-        </Link>
-        <Link className={s.link} to="/admin">
-          Admin
-        </Link>
-         <Link className={s.link} to="/vendors">
-          Vendors
-        </Link>
-        <span className={s.spacer}> | </span>
-        <Link className={s.link} to="/login">
-          Log in
-        </Link>
-        <span className={s.spacer}>or</span>
-        <Link className={cx(s.link, s.highlight)} to="/register">
-          Sign up
-        </Link>
-      </div>
+
+        <div style={{background: '#2c3e50', color: '#FFF', width: 220}}>
+        <SideNav highlightColor='#E91E63' highlightBgColor='#00bcd4' defaultSelected='sales'>
+            <Nav id='dashboard'>
+
+                <NavText> Dashboard </NavText>
+            </Nav>
+            <Nav id='sales'>
+
+                <NavText> Sales </NavText>
+            </Nav>
+               <Nav id='dashboard'>
+
+                <NavText> Dashboard </NavText>
+            </Nav>
+            <Nav id='sales'>
+
+                <NavText> Sales </NavText>
+            </Nav>
+        </SideNav>
+    </div>
+
     );
   }
 }
 
-export default withStyles(s)(Navigation);
+export default withStyles(styles)(Navigation);

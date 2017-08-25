@@ -20,7 +20,7 @@ class Header extends React.Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <Navigation />
+
           <Link className={s.brand} to="/">
             <img
               src={logoUrl}
@@ -31,8 +31,7 @@ class Header extends React.Component {
             />
             <span className={s.brandTxt}>Admin Portal</span>
           </Link>
-          <div className={s.banner}>
-          </div>
+          <div className={s.banner} />
         </div>
       </div>
     );
